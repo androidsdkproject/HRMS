@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:fitsSystemWindows="true"
+    android:id="@+id/registrationlayout"
+    tools:context=".RegistrationEmployeeActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="1dp">
+
+            <ImageView
+                android:id="@+id/person"
+                android:layout_width="15dp"
+                android:layout_height="25sp"
+                android:layout_marginLeft="8sp"
+                android:src="@drawable/ic_perm_identity_black_24dp" />
+
+            <EditText
+                android:id="@+id/editemployeename"
+                android:layout_width="match_parent"
+                android:layout_height="25sp"
+                android:layout_marginLeft="8sp"
+                android:layout_toEndOf="@+id/person"
+                android:hint="Enter Name"
+                android:inputType="text"
+                android:padding="5sp"
+                android:textSize="8sp" />
+
+
+            <ImageView
+                android:id="@+id/phone"
+                android:layout_width="15dp"
+                android:layout_height="25sp"
+                android:layout_below="@+id/editemployeename"
+                android:layout_marginLeft="8sp"
+                android:src="@drawable/ic_phone_black_24dp" />
+
+            <EditText
+                android:id="@+id/editmobilenumber"
+                android:layout_width="match_parent"
+                android:layout_height="25sp"
+                android:layout_below="@+id/editemployeename"
+                android:layout_marginLeft="8sp"
+                android:layout_toEndOf="@+id/phone"
+                android:hint="Enter Mobile No"
+                android:inputType="phone"
+                android:maxLength="10"
+                android:padding="5sp"
+                android:textSize="8sp" />
+
+
+            <ImageView
+                android:id="@+id/email"
+                android:layout_width="15dp"
+                android:layout_height="25sp"
+                android:layout_below="@+id/editmobilenumber"
+                android:layout_marginLeft="8sp"
+                android:src="@drawable/ic_email_black_24dp" />
+
+            <EditText
+                android:id="@+id/editemailid"
+                android:layout_width="match_parent"
+                android:layout_height="25sp"
+                android:layout_below="@+id/editmobilenumber"
+                android:layout_marginLeft="8sp"
+                android:layout_toEndOf="@+id/person"
+                android:hint="Enter Email"
+                android:inputType="textEmailAddress"
+                android:padding="5sp"
+                android:textSize="8sp" />
+
+
+            <ImageView
+                android:id="@+id/aadhar"
+                android:layout_width="15dp"
+                android:layout_height="25sp"
+                android:layout_marginLeft="8dp"
+                android:background="@android:color/transparent"
+                android:src="@mipmap/aadhar"
+                android:layout_below="@+id/email"
+                android:layout_alignParentStart="true" />
+
+            <EditText
+                android:id="@+id/editaadharcard"
+                android:layout_width="match_parent"
+                android:layout_height="25sp"
+                android:layout_below="@+id/email"
+                android:layout_marginLeft="8sp"
+                android:layout_toEndOf="@+id/person"
+                android:hint="Enter Aadhar Card No"
+                android:inputType="number"
+                android:padding="5sp"
+                android:maxLength="14"
+                android:textSize="8sp" />
+
+            <TextView
+                android:id="@+id/imagetext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/editaadharcard"
+                android:text="click to capture image"
+                android:textColor="#000"
+                android:textSize="6sp" />
+
+
+            <ImageView
+                android:id="@+id/EmployeePic"
+                android:layout_width="50sp"
+                android:layout_height="50sp"
+                android:clickable="true"
+                android:src="@drawable/profile"
+                android:layout_below="@+id/thumbtext"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+
+                android:id="@+id/thumbtext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/editaadharcard"
+                android:text="click to capture fingerprint"
+                android:textColor="#000"
+                android:textSize="7sp" />
+
+            <ImageView
+                android:id="@+id/EmployeeThumb"
+                android:layout_width="50sp"
+                android:layout_height="50sp"
+                android:layout_above="@+id/submit"
+                android:layout_alignParentEnd="true"
+                android:clickable="true"
+                android:src="@drawable/thumb" />
+
+
+            <TextView
+                android:id="@+id/quality"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/EmployeeThumb"
+                android:gravity="center"
+
+                android:textSize="8dp"
+
+                />
+
+            <Button
+                android:id="@+id/submit"
+                android:layout_width="match_parent"
+                android:layout_height="15sp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:layout_below="@+id/EmployeePic"
+                android:background="@color/colorPrimary"
+                android:backgroundTint="#38a34d"
+                android:fontFamily="sans-serif"
+                android:text="Submit"
+                android:textAllCaps="false"
+                android:textColor="#ffffff"
+                android:textSize="8sp" />
+
+
+            <TextView
+                android:id="@+id/logs"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/submit"
+                android:textSize="15sp" />
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>
